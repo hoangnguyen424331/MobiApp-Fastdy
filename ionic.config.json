@@ -1,0 +1,7 @@
+{
+  "name": "ssm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
