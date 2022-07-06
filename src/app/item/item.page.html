@@ -40,11 +40,11 @@
 
 <span *ngFor="let item of category.items">
 <ion-row style="margin-top: 20px;padding: 0px" *ngIf="!veg && item.nonveg == 1 || item.nonveg == 0">
-<ion-col size="3"><img src="{{ item.img }}"></ion-col>
-<ion-col size="5" style="padding: 2px 10px"><b>{{ item.name }}</b><br>
+<ion-col size="10"><img src="{{ item.img }}"></ion-col>
+<ion-col size="10" style="padding: 2px 10px"><b>{{ item.name }}</b><br>
 
-<small style="color: gray;font-size: 10px">{{ item.price }}{{ data.currency }}</small><br>
-<small style="color: gray;font-size: 10px" *ngIf="item.description">{{ item.description }}</small>
+<small style="color: gray;font-size: 15px">{{ item.price }}{{ data.currency }}</small><br>
+<small style="color: gray;font-size: 15px" *ngIf="item.description">{{ item.description }}</small>
 
 </ion-col>
 <ion-col size="3" style="text-align: right">
@@ -54,15 +54,14 @@
 <ion-button size="small" fill="outline" *ngIf="item.count > 1 || item.addon.length > 0" (click)="showOption(item,data.currency)">{{ text.item_add_button }}</ion-button>
 </span>
 
-<div class="quantitybtn" *ngIf="hasCart(item.id)">
+<!-- <div class="quantitybtn" *ngIf="hasCart(item.id)">
     <button type="button" class="sign plus" data-quantity="plus" data-field="quantity" (click)="updateCart(item.id)"> - </button>
     <input class="quantityinput" type="text" name="qty" value="{{ hasCart(item.id) }}" readonly="readonly">
 
     <button type="button" class="sign minus" data-quantity="minus" data-field="quantity" *ngIf="item.count == 1" (click)="addToCart(item.id,item.price,0)">+</button>
 
     <button type="button" class="sign minus" data-quantity="minus" data-field="quantity" *ngIf="item.count > 1" (click)="showOption(item,data.currency)">+</button>
-</div>
-
+</div> -->
 </ion-col>
 </ion-row>
 </span>

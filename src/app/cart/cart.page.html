@@ -63,7 +63,9 @@
 <ion-col size="3"><img src="{{ item.img }}"></ion-col>
 <ion-col size="9" style="padding: 0px 10px"><b>{{ item.item }}</b>
 
-<br><small>{{ text.cart_price }} : {{ item.price }}{{ data.currency }} | {{ text.cart_qty }} : {{ item.qty }} {{ item.qtyName }}</small>
+<br><small>{{ text.cart_price }} : {{ item.price }}{{ data.currency }} | {{ text.cart_qty }} : {{ item.qty }} </small>
+
+<!-- {{ item.qtyName }} -->
 
 <span *ngIf="item.addon.length > 0">
 
@@ -92,7 +94,7 @@
 <ion-col size="4" class="border_bottom_only" *ngIf="data.d_charges > 0">{{ data.d_charges }} {{ data.currency }}</ion-col>
 
 <ion-col size="8" class="border_bottom_only" *ngIf="data.discount > 0">{{ text.cart_discount }}</ion-col>
-<ion-col size="4" class="border_bottom_only" *ngIf="data.discount > 0">{{ data.discount }}{{ data.currency }}</ion-col>
+<ion-col size="4" class="border_bottom_only" *ngIf="data.discount > 0">{{ data.discount }}.000 {{ data.currency }}</ion-col>
 
 <ion-col size="8" class="border_bottom_only" *ngIf="data.discount == 0">{{ text.cart_coupon }}</ion-col>
 <ion-col size="4" class="border_bottom_only" *ngIf="data.discount == 0"><a (click)="coupen()">{{ text.cart_apply }}</a></ion-col>
